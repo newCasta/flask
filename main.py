@@ -1,13 +1,14 @@
+import json
 import os
-from flask import Flask, jsonify
-from data.gastronomic_industria_dataframe import restaurant_json
+from flask import Flask
+from data.gastronomic_industria_dataframe import restaurants_json
 
 app = Flask(__name__)
 
 
 @app.route("/restaurants")
 def get_restaurants():
-    return restaurant_json
+    return {"restaurants": json.loads(restaurants_json)}
 
 
 if __name__ == "__main__":

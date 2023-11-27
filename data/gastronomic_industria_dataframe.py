@@ -1,4 +1,3 @@
-from flask.json import jsonify
 import pandas as pd
 import numpy as np
 
@@ -42,5 +41,3 @@ r_df["phone"] = r_df["phone"].apply(lambda x: x.replace(".0", ""))
 r_df["email"] = r_df["email"].apply(lambda x: x.replace("NO", "N/A"))
 
 restaurants_json = r_df.to_json(orient="records")
-
-print(jsonify({"restaurants": restaurants_json}))
