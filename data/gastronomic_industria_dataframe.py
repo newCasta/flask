@@ -1,3 +1,5 @@
+import json
+import uuid
 import pandas as pd
 import numpy as np
 
@@ -40,4 +42,16 @@ r_df = r_df[r_df["type_establishment"].str.contains("restaurante")]
 r_df["phone"] = r_df["phone"].apply(lambda x: x.replace(".0", ""))
 r_df["email"] = r_df["email"].apply(lambda x: x.replace("NO", "N/A"))
 
-restaurants_json = r_df.to_json(orient="records")
+
+def get_restaurants_obj():
+    restaurants_json = json.loads(r_df.to_json(orient="records"))
+    restaurants = []
+
+    for restaurant in restaurants_json:
+        id = str(uuid.uuid4())
+
+        restaurant["id"] = id
+
+        restaurants.append(restaurant)
+
+    return restaurants
