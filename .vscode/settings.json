@@ -1,0 +1,22 @@
+{
+    "cSpell.words": [
+        "Choo",
+        "CLIENTES",
+        "dataframe",
+        "DIRECCION",
+        "ESTABLECIMIENTO",
+        "GANANCIAS",
+        "gastronomica",
+        "industria",
+        "jsonify",
+        "LOACION",
+        "NOMBRE",
+        "PROMEDIA",
+        "PROMEDIO",
+        "restaurante",
+        "TELEFONO",
+        "TIPO"
+    ],
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.typeCheckingMode": "basic"
+}
